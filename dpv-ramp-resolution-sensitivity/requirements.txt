@@ -1,0 +1,17 @@
+numpy
+pandas
+xarray
+netcdf4
+h5netcdf
+scipy
+scikit-learn
+matplotlib
+requests
+pillow
+gcsfs
+zarr
+fsspec
+dask
+cdsapi
+tabulate
+
