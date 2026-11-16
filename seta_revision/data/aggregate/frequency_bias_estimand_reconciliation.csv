@@ -1,0 +1,15 @@
+estimand_scope,months,product,stations,station_months,macro_station_month_frequency_bias,observed_events_sum,modelled_events_sum,pooled_event_count_frequency_bias
+all_products_common_hour_mask,"2025-04,2025-07",ERA5_native_27.5km,7,14,0.98293603,836,578,0.69138756
+all_products_common_hour_mask,"2025-04,2025-07",ERA5_regridded_2.5km,7,14,0.966555,836,564,0.67464115
+all_products_common_hour_mask,"2025-04,2025-07",Tianji_10km,7,14,0.8062864,836,493,0.58971292
+all_products_common_hour_mask,"2025-04,2025-07",Tianji_2.5km,7,14,1.0190702,836,655,0.78349282
+all_products_common_hour_mask,"2025-04,2025-07",Tianji_25km,7,14,0.6324401,836,367,0.43899522
+all_products_common_hour_mask,"2025-04,2025-07",Tianji_27.5km,7,14,0.62247744,836,363,0.43421053
+all_products_common_hour_mask,"2025-04,2025-07",Tianji_5km,7,14,0.94108413,836,599,0.71650718
+canonical_product_specific_mask,"2025-04,2025-07",ERA5_native_27.5km,7,14,0.98369018,838,580,0.69212411
+canonical_product_specific_mask,"2025-04,2025-07",ERA5_regridded_2.5km,7,14,0.966555,836,564,0.67464115
+canonical_product_specific_mask,"2025-04,2025-07,2025-10",Tianji_10km,7,21,0.76729978,937,522,0.55709712
+canonical_product_specific_mask,"2025-04,2025-07,2025-10",Tianji_2.5km,7,21,1.0233041,937,715,0.76307364
+canonical_product_specific_mask,"2025-04,2025-07,2025-10",Tianji_25km,7,21,0.47886652,937,379,0.40448239
+canonical_product_specific_mask,"2025-04,2025-07,2025-10",Tianji_27.5km,7,21,0.45728466,937,371,0.3959445
+canonical_product_specific_mask,"2025-04,2025-07,2025-10",Tianji_5km,7,21,0.93477152,937,645,0.68836713

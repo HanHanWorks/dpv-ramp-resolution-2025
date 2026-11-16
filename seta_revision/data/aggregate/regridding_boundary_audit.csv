@@ -1,0 +1,5 @@
+product_suffix,nominal_resolution_km,factor,domain_cells,cells_diff_gt_1_wm2,share_of_domain_pct,max_abs_diff_wm2,mean_abs_diff_wm2
+5km,5.0,2,12000,0,0.0,0.0,0.0
+10km,10.0,4,12000,0,0.0,0.0,0.0
+25km,25.0,10,12000,0,0.0,0.0,0.0
+0.25deg_like,27.5,11,12000,360,3.0,75.23435974121094,1.3437052965164185

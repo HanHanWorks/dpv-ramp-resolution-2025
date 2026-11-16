@@ -1,0 +1,37 @@
+# Private or licensed inputs and generated analysis products
+data/raw/
+data/private/
+data/processed/
+data/cache/
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.zarr/
+*.grib
+*.grb
+*.parquet
+*.feather
+
+# Local environments and generated outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+outputs/
+figures/generated/
+
+# Credentials and local configuration
+.env
+.env.*
+credentials*
+secrets*
+*.key
+*.pem
+*.p12
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
