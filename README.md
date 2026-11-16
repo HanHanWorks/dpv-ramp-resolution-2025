@@ -67,8 +67,10 @@ and [`seta_revision/docs/reproducibility_workflow.md`](seta_revision/docs/reprod
 
 ## Release policy
 
-The GitHub repository is the code and small-summary-data record. A Zenodo
-deposit, if created later, should use a reviewed tag from this repository and
-must not include the private source datasets. Do not put credentials, local
-absolute paths, station-level files, or raw provider downloads into an issue,
-release asset, or commit.
+The GitHub repository is the code and small-summary-data record. Release
+`V1.0.1` is archived on Zenodo at
+[`10.5281/zenodo.24273521`](https://doi.org/10.5281/zenodo.24273521). Future
+deposits should use a reviewed tag from this repository and must not include
+the private source datasets. Do not put credentials, local absolute paths,
+station-level files, or raw provider downloads into an issue, release asset,
+or commit.

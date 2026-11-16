@@ -18,3 +18,7 @@ keywords:
   - complex terrain
   - ST-DBSCAN
 license: "MIT"
+version: "1.0.1"
+date-released: 2026-11-16
+repository-code: "https://github.com/HanHanWorks/dpv-ramp-resolution-2025"
+doi: "10.5281/zenodo.24273521"
