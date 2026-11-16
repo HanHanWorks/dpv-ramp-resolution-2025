@@ -1,62 +1,76 @@
-# DPV Ramp Resolution Sensitivity in Complex Terrain
+# Station-referenced photovoltaic ramp analysis
 
-Public algorithm code supporting the manuscript *"Spatial support and product  
-physics jointly control station-referenced photovoltaic ramp characterization in  
-complex terrain"*, submitted to *Sustainable Energy Technologies and  
-Assessments* (SETA, Elsevier).
+Code and selected aggregate results accompanying the SETA manuscript
+"Spatial support and product physics jointly control station-referenced
+photovoltaic ramp characterization in complex terrain".
 
-## Scope
+The current revision package is under [`seta_revision/`](seta_revision/).
+The older [`dpv-ramp-resolution-sensitivity/`](dpv-ramp-resolution-sensitivity/)
+directory is retained as a legacy workflow snapshot and is not the source of
+the current revision results.
 
-The code supports:
+## What is public
 
-- gridded meteorological preprocessing and time alignment;
-- weather-to-PV conversion using simplified, reproducible PV models;
-- gridded PV ramp-event detection;
-- ST-DBSCAN ramp-cluster identification;
-- controlled weather-field-first and PV-field-first spatial coarsening experiments;
-- terrain-conditioned ramp summaries;
-- PV-model, ramp-threshold, and clustering-parameter sensitivity checks;
-- NASA POWER open-product benchmarking;
-- IEEE33 hosting-capacity application demonstration.
+This repository contains analysis code, configuration-independent scripts,
+dependency lists, documentation, and a small set of aggregate summary tables.
+The aggregate tables contain no station-level identifiers or raw observations.
 
-The repository intentionally does not include Tianji raw data, ERA5 extracts, NASA POWER cached responses, terrain tile caches, processed NetCDF files, manuscript figures, or analysis result tables.
+Purchased or provider-controlled source data remain private and are not stored
+in GitHub. This includes station observations, Tianji and ERA5 fields, cached
+NASA POWER responses, Himawari collections, terrain caches, NetCDF/HDF5 files,
+and detailed event or timestamp tables. Obtain those inputs independently and
+under the applicable provider terms.
 
-## Repository Layout
+The software license applies to the code only. It does not grant permission to
+redistribute source data or impose a license on third-party data products.
+
+## Current revision layout
 
 ```text
-configs/
-  monthly_experiment_plan.csv
-  station_metadata_template.csv
-docs/
-  data_access_and_sensitivity.md
-  reproducibility_workflow.md
-scripts/
-  *.py
-README.md
-requirements.txt
-.gitignore
-LICENSE
-CITATION.cff
+seta_revision/
+  01_revision_package/       table-rebuild helper scripts
+  02_evidence_and_analysis/  current station-reference analysis scripts
+  04_build_and_qa/           figure-rebuild helper
+  data/aggregate/             selected non-station summary tables
+  docs/                       data boundary and reproduction notes
+  requirements.txt
 ```
 
-## Data Boundary
+## Reproduction boundary
 
-No sensitive or restricted data are included. To reproduce the manuscript analyses, place locally authorized input data under the ignored `data/` directory following the relative paths described in `docs/reproducibility_workflow.md`.
+The scripts that rebuild results require an authorized local project containing
+the purchased/private inputs. Set `SETA_PROJECT_ROOT` to that local project;
+the scripts do not download or publish those files. The included aggregate
+tables allow inspection of selected published summaries without access to the
+source observations.
 
-NASA POWER is an open product and can be downloaded by `scripts/run_nasa_power_station_benchmark.py`. Tianji and some local processed products may be subject to access restrictions; do not upload them unless you have redistribution rights.
-
-## Quick Start
+For a raw-data rerun, install the revision dependencies and pass the private
+input paths explicitly:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/run_ramp_resolution_experiments.py
-python scripts/run_ghi_first_coarsening_experiment.py
+python -m pip install -r seta_revision/requirements.txt
+export SETA_PROJECT_ROOT=/absolute/path/to/the/private/source/project
+python seta_revision/02_evidence_and_analysis/analyses/run_seta_canonical_station_scan_consecutive_hours.py \
+  --stations "$SETA_PROJECT_ROOT/paper_writing_package_seta_major_revision/01_data/station_reference/integrated_15site_validation_hourly_repaired.csv" \
+  --data-root "$SETA_PROJECT_ROOT/data" \
+  --output-dir "$SETA_PROJECT_ROOT/data/analysis/seta_revision" \
+  --months 2025-04 2025-07 2025-10 \
+  --thresholds 100 150 200 250 300 350 400 \
+  --tolerances 0 1 2 3
 ```
 
-The quick-start command assumes the required local input files already exist under `data/processed/`. See `docs/reproducibility_workflow.md` for the expected pipeline order and paths.
+The raw-data workflow is intentionally not claimed to be self-contained in
+this repository. See [`seta_revision/docs/data_access_and_sensitivity.md`](seta_revision/docs/data_access_and_sensitivity.md)
+and [`seta_revision/docs/reproducibility_workflow.md`](seta_revision/docs/reproducibility_workflow.md).
 
-## Claim Boundary
+## Release policy
 
-This code is for resolution-sensitivity analysis and reproducible method reporting. It does not provide measured GHI/PV validation, plant-level PV calibration, real-feeder planning, economic valuation, investment analysis, or storage-sizing optimization.
+The GitHub repository is the code and small-summary-data record. Release
+`V1.0.1` is archived on Zenodo at
+[`10.5281/zenodo.24273521`](https://doi.org/10.5281/zenodo.24273521). Future
+deposits should use a reviewed tag from this repository and must not include
+the private source datasets. Do not put credentials, local absolute paths,
+station-level files, or raw provider downloads into an issue, release asset,
+or commit.

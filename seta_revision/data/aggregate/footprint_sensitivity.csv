@@ -1,0 +1,29 @@
+row_type,solar_qc_group,series,comparison,stations,station_months,macro_station_month_csi,ci95_low,ci95_high,paired_delta_csi,paired_delta_ci95_low,paired_delta_ci95_high,observed_events_sum,modelled_events_sum
+product,primary_solar_qc,ERA5_native_27.5km,,7,14,0.1821971926945829,,,,,,836,578
+product,primary_solar_qc,ERA5_regridded_2.5km,,7,14,0.18592553407208345,,,,,,836,564
+product,primary_solar_qc,Tianji_2.5km,,7,14,0.2119918631273169,,,,,,836,655
+product,primary_solar_qc,Tianji_2.5km_3x3,,7,14,0.18648112731335612,,,,,,836,558
+product,primary_solar_qc,Tianji_2.5km_5x5,,7,14,0.16424736637789955,,,,,,836,477
+product,primary_solar_qc,Tianji_27.5km,,7,14,0.13568284750774806,,,,,,836,363
+paired_contrast,primary_solar_qc,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km,7,14,0.1821971926945829,,,-0.029794670432733962,-0.057341423,-0.0035799931886378983,836,578
+paired_contrast,primary_solar_qc,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km,7,14,0.18592553407208345,,,-0.026066329055233445,-0.054647461,-0.0016904016,836,564
+paired_contrast,primary_solar_qc,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km_3x3,7,14,0.1821971926945829,,,-0.0042839346187732155,-0.03359212762110342,0.024279947978830558,836,578
+paired_contrast,primary_solar_qc,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km_3x3,7,14,0.18592553407208345,,,-0.0005555932412727013,-0.026160940642818813,0.02603485151278553,836,564
+paired_contrast,primary_solar_qc,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km_5x5,7,14,0.1821971926945829,,,0.017949826316683386,-0.011429499243072992,0.048432374657689285,836,578
+paired_contrast,primary_solar_qc,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km_5x5,7,14,0.18592553407208345,,,0.021678167694183903,-0.005816362403319488,0.05169688935953742,836,564
+paired_contrast,primary_solar_qc,Tianji_27.5km,Tianji_27.5km minus Tianji_2.5km_3x3,7,14,0.13568284750774806,,,-0.0507982798056081,-0.07065403861357047,-0.031256283436930966,836,363
+paired_contrast,primary_solar_qc,Tianji_27.5km,Tianji_27.5km minus Tianji_2.5km_5x5,7,14,0.13568284750774806,,,-0.028564518870151493,-0.04367586543269437,-0.013421098906159765,836,363
+product,secondary_solar_qc_unverified,ERA5_native_27.5km,,8,16,0.16634904045837867,,,,,,783,693
+product,secondary_solar_qc_unverified,ERA5_regridded_2.5km,,8,16,0.16078733812373824,,,,,,783,653
+product,secondary_solar_qc_unverified,Tianji_2.5km,,8,16,0.18024273114997866,,,,,,783,734
+product,secondary_solar_qc_unverified,Tianji_2.5km_3x3,,8,16,0.17203728928858153,,,,,,783,667
+product,secondary_solar_qc_unverified,Tianji_2.5km_5x5,,8,16,0.16415115354884746,,,,,,783,582
+product,secondary_solar_qc_unverified,Tianji_27.5km,,8,16,0.11289299666967495,,,,,,783,402
+paired_contrast,secondary_solar_qc_unverified,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km,8,16,0.16634904045837867,,,-0.013893690691599977,-0.03294150103679347,0.003063528900760318,783,693
+paired_contrast,secondary_solar_qc_unverified,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km,8,16,0.16078733812373824,,,-0.01945539302624041,-0.045101794248689764,0.0021238579502114953,783,653
+paired_contrast,secondary_solar_qc_unverified,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km_3x3,8,16,0.16634904045837867,,,-0.005688248830202869,-0.024539151597469663,0.010745223317059209,783,693
+paired_contrast,secondary_solar_qc_unverified,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km_3x3,8,16,0.16078733812373824,,,-0.0112499511648433,-0.037506009162242136,0.009507239079219715,783,653
+paired_contrast,secondary_solar_qc_unverified,ERA5_native_27.5km,ERA5_native_27.5km minus Tianji_2.5km_5x5,8,16,0.16634904045837867,,,0.0021978869095312208,-0.014560908521398457,0.01612145041428656,783,693
+paired_contrast,secondary_solar_qc_unverified,ERA5_regridded_2.5km,ERA5_regridded_2.5km minus Tianji_2.5km_5x5,8,16,0.16078733812373824,,,-0.003363815425109211,-0.026058615321439584,0.014716898025999466,783,653
+paired_contrast,secondary_solar_qc_unverified,Tianji_27.5km,Tianji_27.5km minus Tianji_2.5km_3x3,8,16,0.11289299666967495,,,-0.05914429261890659,-0.07094560594236449,-0.0437369637279148,783,402
+paired_contrast,secondary_solar_qc_unverified,Tianji_27.5km,Tianji_27.5km minus Tianji_2.5km_5x5,8,16,0.11289299666967495,,,-0.051258156879172505,-0.06540900386821168,-0.034852562504876165,783,402

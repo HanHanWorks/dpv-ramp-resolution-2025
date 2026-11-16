@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript: 'Spatial support and product physics jointly control station-referenced photovoltaic ramp characterization in complex terrain', Sustainable Energy Technologies and Assessments (SETA, Elsevier)."
+title: "Spatial support and product physics jointly control station-referenced photovoltaic ramp characterization in complex terrain"
+authors:
+  - family-names: Huang
+    given-names: Zihao
+    orcid: "https://orcid.org/0009-0006-5842-6516"
+  - family-names: Liao
+    given-names: Lirun
+  - family-names: Chen
+    given-names: Yan
+    orcid: "https://orcid.org/0000-0002-9950-684X"
+keywords:
+  - distributed photovoltaic
+  - solar ramps
+  - meteorological reanalysis
+  - spatial resolution
+  - complex terrain
+  - ST-DBSCAN
+license: "MIT"
+version: "1.0.1"
+date-released: 2026-11-16
+repository-code: "https://github.com/HanHanWorks/dpv-ramp-resolution-2025"
+doi: "10.5281/zenodo.24273521"

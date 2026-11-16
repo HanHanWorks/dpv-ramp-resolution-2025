@@ -1,0 +1,6 @@
+product_suffix,nominal_resolution_km,factor,fine_cells_y,fine_cells_x,coarse_cells_y,coarse_cells_x,nx_block_sizes,ny_block_sizes,containing_block_weight,off_block_weight,coverage_fraction,boundary_treatment,padded_cells,fine_cells_covered
+2.5km,2.5,1,100,120,100,120,1x120,1x100,1.0,0.0,1.0,identity (native grid),0,
+5km,5.0,2,100,120,50,60,59x2 + 1x2,49x2 + 1x2,1.0,0.0,1.0,coarsen boundary='pad'; last block is partial and is averaged over its valid cells only,0,12000.0
+10km,10.0,4,100,120,25,30,29x4 + 1x4,24x4 + 1x4,1.0,0.0,1.0,coarsen boundary='pad'; last block is partial and is averaged over its valid cells only,0,12000.0
+25km,25.0,10,100,120,10,12,11x10 + 1x10,9x10 + 1x10,1.0,0.0,1.0,coarsen boundary='pad'; last block is partial and is averaged over its valid cells only,0,12000.0
+0.25deg_like,27.5,11,100,120,10,11,10x11 + 1x10,9x11 + 1x1,1.0,0.0,1.0,coarsen boundary='pad'; last block is partial and is averaged over its valid cells only,1290,12000.0
